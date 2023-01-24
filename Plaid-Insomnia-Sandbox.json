@@ -1,0 +1,4396 @@
+{
+    "_type":"export",
+    "__export_format":4,
+    "__export_date":"2023-01-24T19:29:47.992Z",
+    "__export_source":"insomnia.desktop.app:v2022.7.5",
+    "resources":[
+       {
+          "_id":"req_f4414a931b9f4779b03eab2b43bb6973",
+          "parentId":"fld_b571997204b0430bbb3e9eeb6cce2927",
+          "modified":1674587360549,
+          "created":1674587360549,
+          "url":"https://{{env_url}}/signal/return/report",
+          "name":"Report an ACH return",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"client_transaction_id\": \"{{client_transaction_id}}\",\n  \"return_code\": \"R16\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360549,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_b571997204b0430bbb3e9eeb6cce2927",
+          "parentId":"fld_b259b6a10e2548f68bb18d8cc39dab66",
+          "modified":1674587360553,
+          "created":1674587360553,
+          "name":"Signal",
+          "description":"",
+          "environment":{
+             
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1674587360553,
+          "_type":"request_group"
+       },
+       {
+          "_id":"fld_b259b6a10e2548f68bb18d8cc39dab66",
+          "parentId":"wrk_ViWEWUFbvucz0Lto0a5S",
+          "modified":1674587360606,
+          "created":1674587360606,
+          "name":"Plaid API Endpoints",
+          "description":"Documentation for how to use this collection, including a Quickstart guide, is on the [Plaid Postman GitHub README](https://github.com/plaid/plaid-postman).\n\nDetailed documentation for Plaid API endpoints is at the [Plaid API reference guide](https://www.plaid.com/docs/api).\n\nBefore you begin, set your `client_id` and `secret_key` variables in the Sandbox environment. You can find them in your Plaid [dashboard](https://dashboard.plaid.com/account/keys). Set the variables by clicking on the 'eye' icon in the top-right corner of the screen.",
+          "environment":{
+             "origin":"https://sandbox.plaid.com (Sandbox)",
+             "savedData":""
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1674587360606,
+          "_type":"request_group"
+       },
+       {
+          "_id":"wrk_ViWEWUFbvucz0Lto0a5S",
+          "parentId":null,
+          "modified":1674588076970,
+          "created":1674587331704,
+          "name":"Plaid API Endpoints",
+          "description":"",
+          "scope":"collection",
+          "_type":"workspace"
+       },
+       {
+          "_id":"req_cd3a3c7a44de4c479e4601fabd0bbfa8",
+          "parentId":"fld_b571997204b0430bbb3e9eeb6cce2927",
+          "modified":1674587360550,
+          "created":1674587360550,
+          "url":"https://{{env_url}}/signal/report",
+          "name":"Report whether you initiated an ACH transaction",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"client_transaction_id\": \"{{client_transaction_id}}\",\n  \"initiated\": true\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360550,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_80c31bc261ce4e6da784336716e76b00",
+          "parentId":"fld_b571997204b0430bbb3e9eeb6cce2927",
+          "modified":1674587360551,
+          "created":1674587360551,
+          "url":"https://{{env_url}}/signal/evaluate",
+          "name":"Evaluate a planned ACH transaction",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"access_token\": \"{{access_token}}\",\n  \"account_id\": \"{{account_id}}\",\n  \"client_transaction_id\": \"your_unique_identifier_goes_here\",\n  \"amount\": 100.12\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360551,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_78616459dde64c4e83d1a420c34f52b6",
+          "parentId":"fld_b571997204b0430bbb3e9eeb6cce2927",
+          "modified":1674587360552,
+          "created":1674587360552,
+          "url":"https://{{env_url}}/signal/prepare",
+          "name":"Initialize an Item with Signal",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"access_token\": \"{{access_token}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360552,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_2a479bc08ad1421490518826da9956cc",
+          "parentId":"fld_432dd500c3e04ed4b5c2f6d28c49e9da",
+          "modified":1674587360554,
+          "created":1674587360554,
+          "url":"https://{{env_url}}/dashboard_user/get",
+          "name":"Retrieve a dashboard user",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"dashboard_user_id\": \"{{dashboard_user_id}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360554,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_432dd500c3e04ed4b5c2f6d28c49e9da",
+          "parentId":"fld_b259b6a10e2548f68bb18d8cc39dab66",
+          "modified":1674587360564,
+          "created":1674587360564,
+          "name":"Watchlist Screening",
+          "description":"",
+          "environment":{
+             
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1674587360564,
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_ea4b521a746b4f068b9aa70d1a8518ba",
+          "parentId":"fld_432dd500c3e04ed4b5c2f6d28c49e9da",
+          "modified":1674587360554,
+          "created":1674587360554,
+          "url":"https://{{env_url}}/dashboard_user/list",
+          "name":"List dashboard users",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360554,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_682dc7ba2aec4dd9b3495900fd2be16e",
+          "parentId":"fld_432dd500c3e04ed4b5c2f6d28c49e9da",
+          "modified":1674587360555,
+          "created":1674587360555,
+          "url":"https://{{env_url}}/watchlist_screening/entity/review/create",
+          "name":"Create a Review for an Entity Watchlist Screening",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"entity_watchlist_screening_id\": \"{{entity_watchlist_screening_id}}\",\n  \"confirmed_hits\": [\"{{entity_watchlist_screening_hit_id}}\"],\n  \"dismissed_hits\": []\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360556,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_948473355a814c02834f5532ef9bd2cf",
+          "parentId":"fld_432dd500c3e04ed4b5c2f6d28c49e9da",
+          "modified":1674587360555,
+          "created":1674587360555,
+          "url":"https://{{env_url}}/watchlist_screening/entity/review/list",
+          "name":"List Reviews for Entity Watchlist Screenings",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"entity_watchlist_screening_id\": \"{{entity_watchlist_screening_id}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360555,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_88834ac23de64eaa9902331e70b83897",
+          "parentId":"fld_432dd500c3e04ed4b5c2f6d28c49e9da",
+          "modified":1674587360556,
+          "created":1674587360556,
+          "url":"https://{{env_url}}/watchlist_screening/entity/hit/list",
+          "name":"List Hits for Entity Watchlist Screenings",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"entity_watchlist_screening_id\": \"{{entity_watchlist_screening_id}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360556,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_11ee8654601b4f129932f978cd917c2c",
+          "parentId":"fld_432dd500c3e04ed4b5c2f6d28c49e9da",
+          "modified":1674587360557,
+          "created":1674587360557,
+          "url":"https://{{env_url}}/watchlist_screening/entity/history/list",
+          "name":"List History for Entity Watchlist Screenings",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"entity_watchlist_screening_id\": \"{{entity_watchlist_screening_id}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360557,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_fc7aea6db637425a9df31535db7f6102",
+          "parentId":"fld_432dd500c3e04ed4b5c2f6d28c49e9da",
+          "modified":1674587360557,
+          "created":1674587360557,
+          "url":"https://{{env_url}}/watchlist_screening/entity/list",
+          "name":"List Entity Watchlist Screenings",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"entity_watchlist_program_id\": \"entprg_4LcepLXWLsKgmm\",\n  \"status\": \"cleared\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360557,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_2ef8c756ac4c4394ad4c0683a145d231",
+          "parentId":"fld_432dd500c3e04ed4b5c2f6d28c49e9da",
+          "modified":1674587360558,
+          "created":1674587360558,
+          "url":"https://{{env_url}}/watchlist_screening/entity/update",
+          "name":"Update an Entity Screening",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"entity_watchlist_screening_id\": \"{{entity_watchlist_screening_id}}\",\n  \"status\": \"cleared\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360558,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_b7b166b616184b6fa6332f94eff6c560",
+          "parentId":"fld_432dd500c3e04ed4b5c2f6d28c49e9da",
+          "modified":1674587360558,
+          "created":1674587360558,
+          "url":"https://{{env_url}}/watchlist_screening/entity/get",
+          "name":"Get an Entity Screening",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"entity_watchlist_screening_id\": \"{{entity_watchlist_screening_id}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360558,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_26b2a9a60009439ca0e6d5cad4113b82",
+          "parentId":"fld_432dd500c3e04ed4b5c2f6d28c49e9da",
+          "modified":1674587360559,
+          "created":1674587360559,
+          "url":"https://{{env_url}}/watchlist_screening/entity/create",
+          "name":"Create a Watchlist Screening for an Entity",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"search_terms\": {\n    \"entity_watchlist_program_id\": \"entprg_4LcepLXWLsKgmm\",\n    \"legal_name\": \"Al-Qaida\",\n    \"email\": \"user@example.com\",\n    \"country\": \"US\",\n    \"phone_number\": \"+14025671234\",\n    \"url\": \"http://cognitohq.com\"\n  }\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360559,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_3b0242414a434bfbaf2a7280cdeadd6e",
+          "parentId":"fld_432dd500c3e04ed4b5c2f6d28c49e9da",
+          "modified":1674587360559,
+          "created":1674587360559,
+          "url":"https://{{env_url}}/watchlist_screening/entity/program/get",
+          "name":"Get Entity Watchlist Screening Program",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"entity_watchlist_program_id\": \"entprg_4LcepLXWLsKgmm\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360559,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_86b3ced203814e95832f3b94a0a98d04",
+          "parentId":"fld_432dd500c3e04ed4b5c2f6d28c49e9da",
+          "modified":1674587360560,
+          "created":1674587360560,
+          "url":"https://{{env_url}}/watchlist_screening/individual/review/list",
+          "name":"List Reviews for Individual Watchlist Screenings",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"watchlist_screening_id\": \"{{watchlist_screening_id}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360560,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_a30c5a38d65845b9b77f1ff891b49cc8",
+          "parentId":"fld_432dd500c3e04ed4b5c2f6d28c49e9da",
+          "modified":1674587360560,
+          "created":1674587360560,
+          "url":"https://{{env_url}}/watchlist_screening/entity/program/list",
+          "name":"List Entity Watchlist Screening Programs",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360560,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_97c06bf12b8f4ff59a345b910eb828d7",
+          "parentId":"fld_432dd500c3e04ed4b5c2f6d28c49e9da",
+          "modified":1674587360561,
+          "created":1674587360561,
+          "url":"https://{{env_url}}/watchlist_screening/individual/hit/list",
+          "name":"List Hits for Individual Watchlist Screening",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"watchlist_screening_id\": \"{{watchlist_screening_id}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360561,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_bee06e6521664087879d6bc15f45438c",
+          "parentId":"fld_432dd500c3e04ed4b5c2f6d28c49e9da",
+          "modified":1674587360561,
+          "created":1674587360561,
+          "url":"https://{{env_url}}/watchlist_screening/individual/review/create",
+          "name":"Create a Review for an Individual Watchlist Screening",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"watchlist_screening_id\": \"{{watchlist_screening_id}}\",\n  \"confirmed_hits\": [\"{{watchlist_screening_hit_id}}\"],\n  \"dismissed_hits\": []\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360561,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_2d60324f4a2e443c93861a578370d2bf",
+          "parentId":"fld_432dd500c3e04ed4b5c2f6d28c49e9da",
+          "modified":1674587360562,
+          "created":1674587360562,
+          "url":"https://{{env_url}}/watchlist_screening/individual/update",
+          "name":"Update Individual Watchlist Screening",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"watchlist_screening_id\": \"{{watchlist_screening_id}}\",\n  \"status\": \"cleared\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360562,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_7f62d29179a640719d05a1b0c49bb3e9",
+          "parentId":"fld_432dd500c3e04ed4b5c2f6d28c49e9da",
+          "modified":1674587360562,
+          "created":1674587360562,
+          "url":"https://{{env_url}}/watchlist_screening/individual/history/list",
+          "name":"List History for Individual Watchlist Screenings",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"watchlist_screening_id\": \"{{watchlist_screening_id}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360562,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_f46e8ace303b46babd0bd8cb511fa474",
+          "parentId":"fld_432dd500c3e04ed4b5c2f6d28c49e9da",
+          "modified":1674587360562,
+          "created":1674587360562,
+          "url":"https://{{env_url}}/watchlist_screening/individual/list",
+          "name":"List Individual Watchlist Screenings",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"watchlist_program_id\": \"prg_eLWRUt7T8H6WQ1\",\n  \"status\": \"cleared\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360562,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_61b6c3c34ad247adb3d50dfe12172114",
+          "parentId":"fld_432dd500c3e04ed4b5c2f6d28c49e9da",
+          "modified":1674587360563,
+          "created":1674587360563,
+          "url":"https://{{env_url}}/watchlist_screening/individual/create",
+          "name":"Create a Watchlist Screening for an Individual",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"search_terms\": {\n    \"watchlist_program_id\": \"prg_eLWRUt7T8H6WQ1\",\n    \"legal_name\": \"Aleksey Potemkin\",\n    \"country\": \"US\"\n  }\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360563,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_78d8386bb56246ac8c984853d816ef6a",
+          "parentId":"fld_432dd500c3e04ed4b5c2f6d28c49e9da",
+          "modified":1674587360563,
+          "created":1674587360563,
+          "url":"https://{{env_url}}/watchlist_screening/individual/program/get",
+          "name":"Get Individual Watchlist Screening Program",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"watchlist_program_id\": \"prg_eLWRUt7T8H6WQ1\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360563,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_851d07269ba54879b3e6fae788bacef0",
+          "parentId":"fld_432dd500c3e04ed4b5c2f6d28c49e9da",
+          "modified":1674587360563,
+          "created":1674587360563,
+          "url":"https://{{env_url}}/watchlist_screening/individual/get",
+          "name":"Get an Individual Watchlist Screening",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"watchlist_screening_id\": \"{{watchlist_screening_id}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360563,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_2508d686c6b64aa4bc4f0c7eb841a77c",
+          "parentId":"fld_432dd500c3e04ed4b5c2f6d28c49e9da",
+          "modified":1674587360564,
+          "created":1674587360564,
+          "url":"https://{{env_url}}/watchlist_screening/individual/program/list",
+          "name":"List Individual Watchlist Screening Programs",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360564,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_528e71a0d730415b94d2feb680bf85ec",
+          "parentId":"fld_da0a38ab1b624e62a1894f6c485960ce",
+          "modified":1674587360565,
+          "created":1674587360565,
+          "url":"https://{{env_url}}/identity_verification/get",
+          "name":"Retrieve an Identity Verification",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"identity_verification_id\": \"{{identity_verification_id}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360565,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_da0a38ab1b624e62a1894f6c485960ce",
+          "parentId":"fld_b259b6a10e2548f68bb18d8cc39dab66",
+          "modified":1674587360566,
+          "created":1674587360566,
+          "name":"Identity Verification",
+          "description":"",
+          "environment":{
+             
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1674587360566,
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_61aa26f1bc674a35862bb3cb0e17d36d",
+          "parentId":"fld_da0a38ab1b624e62a1894f6c485960ce",
+          "modified":1674587360565,
+          "created":1674587360565,
+          "url":"https://{{env_url}}/identity_verification/retry",
+          "name":"Retry an Identity Verification",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"client_user_id\": \"{{client_user_id}}\",\n  \"template_id\": \"flwtmp_cSX5fHG7CtzxCU\",\n  \"strategy\": \"reset\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360565,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_e93be2cdffdc46ec857a87698be223ce",
+          "parentId":"fld_da0a38ab1b624e62a1894f6c485960ce",
+          "modified":1674587360565,
+          "created":1674587360565,
+          "url":"https://{{env_url}}/identity_verification/list",
+          "name":"List Identity Verifications",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"template_id\": \"flwtmp_cSX5fHG7CtzxCU\",\n  \"client_user_id\": \"{{client_user_id}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360565,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_b59be092295b41a19e5834e984a005f0",
+          "parentId":"fld_da0a38ab1b624e62a1894f6c485960ce",
+          "modified":1674587360566,
+          "created":1674587360566,
+          "url":"https://{{env_url}}/identity_verification/create",
+          "name":"Create a new Identity Verification",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"template_id\": \"flwtmp_cSX5fHG7CtzxCU\",\n  \"gave_consent\": true,\n  \"is_shareable\": true,\n  \"user\": {\n    \"client_user_id\": \"your-db-id-3b24114\",\n    \"email_address\": \"user@example.com\",\n    \"phone_number\": \"+19876543212\",\n    \"date_of_birth\": \"1975-01-18\",\n    \"name\": {\n      \"given_name\": \"Leslie\",\n      \"family_name\": \"Knope\"\n    },\n    \"address\": {\n      \"street\": \"123 Main St.\",\n      \"street2\": \"Unit 42\",\n      \"city\": \"Pawnee\",\n      \"region\": \"IN\",\n      \"postal_code\": \"46001\",\n      \"country\": \"US\"\n    },\n    \"id_number\": {\n      \"value\": \"123456789\",\n      \"type\": \"us_ssn\"\n    }\n  }\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360566,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_509d82875a734cb79fb787d9c2e33883",
+          "parentId":"fld_008bf79880b6473ea5535725b7777dd9",
+          "modified":1674587360567,
+          "created":1674587360567,
+          "url":"https://{{env_url}}/credit/payroll_income/precheck",
+          "name":"Check eligibility for Payroll Income",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"user_token\": \"{{user_token}}\",\n  \"employer\": {\n    \"name\": \"employer_good\",\n    \"address\": {\n      \"city\": \"New York\",\n      \"country\": \"US\",\n      \"postal_code\": \"10012\",\n      \"region\": \"NY\",\n      \"street\": \"123 Main Street\"\n    },\n    \"tax_id\": \"12-3456789\",\n    \"url\": \"https://employergood.com\"\n  }\n}\n  "
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360567,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_008bf79880b6473ea5535725b7777dd9",
+          "parentId":"fld_b259b6a10e2548f68bb18d8cc39dab66",
+          "modified":1674587360570,
+          "created":1674587360570,
+          "name":"Income",
+          "description":"",
+          "environment":{
+             
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1674587360570,
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_5aebbb7d3f884da1a6e0830f1b7776c7",
+          "parentId":"fld_008bf79880b6473ea5535725b7777dd9",
+          "modified":1674587360567,
+          "created":1674587360567,
+          "url":"https://{{env_url}}/credit/bank_income/get",
+          "name":"Retrieve Bank Income",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"user_token\": \"{{user_token}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360567,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_d57aabf5fd6740e8b1bde57597c68b8c",
+          "parentId":"fld_008bf79880b6473ea5535725b7777dd9",
+          "modified":1674587360567,
+          "created":1674587360567,
+          "url":"https://{{env_url}}/sandbox/income/fire_webhook",
+          "name":"Fire Income webhook [Sandbox only]",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"user_token\": \"{{user_token}}\",\n  \"item_id\" : \"ITEM_ID_GOES_HERE\",\n  \"webhook\": \"https://webhook.com/\",\n  \"verification_status\": \"VERIFICATION_STATUS_PROCESSING_COMPLETE\"\n\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360567,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_693c93429ed04cee9b178deb84839017",
+          "parentId":"fld_008bf79880b6473ea5535725b7777dd9",
+          "modified":1674587360568,
+          "created":1674587360568,
+          "url":"https://{{env_url}}/credit/payroll_income/get",
+          "name":"Retrieve Payroll Income",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"user_token\": \"{{user_token}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360568,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_e2a097592d724881acbd94adde8ff540",
+          "parentId":"fld_008bf79880b6473ea5535725b7777dd9",
+          "modified":1674587360568,
+          "created":1674587360568,
+          "url":"https://{{env_url}}/sandbox/public_token/create",
+          "name":"Initialize User Token for Bank Income [Sandbox Only]",
+          "description":"Creates an `Item` in the `sandbox` environment. You will get back a `public_token` and a `request_id`.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"user_token\": \"{{user_token}}\",\n  \"institution_id\": \"ins_20\",\n  \"initial_products\": [\"income_verification\"],\n  \"options\": {\n    \"webhook\": \"https://www.genericwebhookurl.com/webhook\",\n    \"override_username\": \"user_bank_income\",\n    \"override_password\": \"{}\",\n    \"income_verification\": {\n      \"income_source_types\": [\"bank\"],\n      \"bank_income\": {\n          \"days_requested\": 180\n        }\n    }\n  }\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360568,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_1a51d7a85244485fbe70f902e79ef55d",
+          "parentId":"fld_008bf79880b6473ea5535725b7777dd9",
+          "modified":1674587360569,
+          "created":1674587360569,
+          "url":"https://{{env_url}}/sandbox/public_token/create",
+          "name":"Initialize User Token for Payroll Income [Sandbox Only]",
+          "description":"Creates an `Item` in the `sandbox` environment. You will get back a `public_token` and a `request_id`.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"user_token\": \"{{user_token}}\",\n  \"institution_id\": \"ins_90\",\n  \"initial_products\": [\"income_verification\"],\n  \"options\": {\n    \"webhook\": \"https://www.genericwebhookurl.com/webhook\"\n  }\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360569,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_a0428a25acf4474795ba191fa80659c1",
+          "parentId":"fld_008bf79880b6473ea5535725b7777dd9",
+          "modified":1674587360569,
+          "created":1674587360569,
+          "url":"https://{{env_url}}/user/create",
+          "name":"Create User Token",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"client_user_id\": \"unique_user_id\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360569,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_94a985aae866443eb6b292c4d6437330",
+          "parentId":"fld_1c61cd05dfbf46209f3cef18e2f42d69",
+          "modified":1674587360570,
+          "created":1674587360570,
+          "url":"https://{{env_url}}/transfer/payment_profile/remove",
+          "name":"Get a Payment Profile",
+          "description":"Use the `/transfer/authorization/create` endpoint to determine transfer failure risk.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n    \"client_id\": \"{{client_id}}\",\n    \"secret\": \"{{secret_key}}\",\n    \"payment_profile_token\": \"{{payment_profile_token}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360570,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_1c61cd05dfbf46209f3cef18e2f42d69",
+          "parentId":"fld_b259b6a10e2548f68bb18d8cc39dab66",
+          "modified":1674587360578,
+          "created":1674587360578,
+          "name":"Transfer (beta)",
+          "description":"",
+          "environment":{
+             
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1674587360578,
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_9591f70d5b2d4fd7b7db65a463af3f24",
+          "parentId":"fld_1c61cd05dfbf46209f3cef18e2f42d69",
+          "modified":1674587360570,
+          "created":1674587360570,
+          "url":"https://{{env_url}}/transfer/payment_profile/remove",
+          "name":"Delete Payment Profile",
+          "description":"Use the `/transfer/authorization/create` endpoint to determine transfer failure risk.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n    \"client_id\": \"{{client_id}}\",\n    \"secret\": \"{{secret_key}}\",\n    \"payment_profile_token\": \"{{payment_profile_token}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360570,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_5fcda3a51ee440c180893ca96d41881d",
+          "parentId":"fld_1c61cd05dfbf46209f3cef18e2f42d69",
+          "modified":1674587360571,
+          "created":1674587360571,
+          "url":"https://{{env_url}}/transfer/sweep/list",
+          "name":"List transfer sweeps",
+          "description":"Use the `/sandbox/transfer/simulate` endpoint to simulate a transfer event in the Sandbox environment.  Note that while an event will be simulated and will appear when using endpoints such as `/transfer/event/sync` or `/transfer/event/list`, no transactions will actually take place and funds will not move between accounts, even within the Sandbox.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \t\"client_id\": \"{{client_id}}\",\n\t  \"secret\": \"{{secret_key}}\",\n    \"start_date\": \"2019-12-06T22:35:49Z\",\n    \"end_date\": \"2019-12-12T22:35:49Z\",\n    \"count\": 5,\n    \"offset\": 0\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360571,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_ad812d0b66f846dd8ef8f32642be9b15",
+          "parentId":"fld_1c61cd05dfbf46209f3cef18e2f42d69",
+          "modified":1674587360571,
+          "created":1674587360571,
+          "url":"https://{{env_url}}/sandbox/transfer/sweep/simulate",
+          "name":"Simulate a sweep in Sandbox",
+          "description":"Use the `/sandbox/transfer/simulate` endpoint to simulate a transfer event in the Sandbox environment.  Note that while an event will be simulated and will appear when using endpoints such as `/transfer/event/sync` or `/transfer/event/list`, no transactions will actually take place and funds will not move between accounts, even within the Sandbox.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"client_id\": \"{{client_id}}\",\n\t\"secret\": \"{{secret_key}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360571,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_ebb8d0f4f3204f6badd26a669ac652e8",
+          "parentId":"fld_1c61cd05dfbf46209f3cef18e2f42d69",
+          "modified":1674587360571,
+          "created":1674587360571,
+          "url":"https://{{env_url}}/transfer/sweep/get",
+          "name":"Get a sweep",
+          "description":"Use the `/sandbox/transfer/simulate` endpoint to simulate a transfer event in the Sandbox environment.  Note that while an event will be simulated and will appear when using endpoints such as `/transfer/event/sync` or `/transfer/event/list`, no transactions will actually take place and funds will not move between accounts, even within the Sandbox.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"client_id\": \"{{client_id}}\",\n\t\"secret\": \"{{secret_key}}\",\n  \"sweep_id\": \"SWEEP_ID_GOES_HERE\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360571,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_11052f8f7b7d4814bd305404aafe2982",
+          "parentId":"fld_1c61cd05dfbf46209f3cef18e2f42d69",
+          "modified":1674587360572,
+          "created":1674587360572,
+          "url":"https://{{env_url}}/transfer/cancel",
+          "name":"Cancel a transfer",
+          "description":"Use the `/transfer/cancel` endpoint to cancel a transfer.  A transfer is eligible for cancelation if the `cancellable` property returned by `/transfer/get` is `true`.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n    \"client_id\": \"{{client_id}}\",\n    \"secret\": \"{{secret_key}}\",\n    \"transfer_id\": \"{{transfer_id}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360572,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_d3907f85efb34062a717e78228732eb5",
+          "parentId":"fld_1c61cd05dfbf46209f3cef18e2f42d69",
+          "modified":1674587360572,
+          "created":1674587360572,
+          "url":"https://{{env_url}}/sandbox/transfer/simulate",
+          "name":"Simulate a transfer event in Sandbox",
+          "description":"Use the `/sandbox/transfer/simulate` endpoint to simulate a transfer event in the Sandbox environment.  Note that while an event will be simulated and will appear when using endpoints such as `/transfer/event/sync` or `/transfer/event/list`, no transactions will actually take place and funds will not move between accounts, even within the Sandbox.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"client_id\": \"{{client_id}}\",\n\t\"secret\": \"{{secret_key}}\",\n    \"transfer_id\": \"{{transfer_id}}\",\n    \"event_type\": \"failed\",\n    \"failure_reason\": {\n        \"ach_return_code\": \"R02\",\n        \"description\": \"account closed\"\n    }\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360572,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_eba1bd74bbf14e3c887cd24ce14ee821",
+          "parentId":"fld_1c61cd05dfbf46209f3cef18e2f42d69",
+          "modified":1674587360572,
+          "created":1674587360572,
+          "url":"https://{{env_url}}/sandbox/transfer/repayment/simulate",
+          "name":"Simulate a repayment in Sandbox",
+          "description":"Use the `/sandbox/transfer/repayment/simulate` endpoint to trigger the creation of a repayment. As a side effect of calling this route, a repayment is created that includes all unreimbursed returns of guaranteed transfers. If there are no such returns, an 400 error is returned.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"client_id\": \"{{client_id}}\",\n\t\"secret\": \"{{secret_key}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360572,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_a9b6377490a043b0b10093fc5acfe820",
+          "parentId":"fld_1c61cd05dfbf46209f3cef18e2f42d69",
+          "modified":1674587360573,
+          "created":1674587360573,
+          "url":"https://{{env_url}}/transfer/list",
+          "name":"List transfers",
+          "description":"Use the `/transfer/list` endpoint to see a list of all your transfers and their statuses. Results are paginated; use the `count` and `offset` query parameters to retrieve the desired transfers.\n",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n    \"client_id\": \"{{client_id}}\",\n    \"secret\": \"{{secret_key}}\",\n    \"start_date\": \"2017-01-01\",\n    \"end_date\": \"2019-05-10\",\n    \"count\": 25,\n    \"offset\": 0\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360573,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_ac27e8b2e50b4883bed10df169bb6ff0",
+          "parentId":"fld_1c61cd05dfbf46209f3cef18e2f42d69",
+          "modified":1674587360573,
+          "created":1674587360573,
+          "url":"https://{{env_url}}/transfer/get",
+          "name":"Get a transfer",
+          "description":"The `/transfer/get` fetches information about the transfer corresponding to the given `transfer_id`.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n    \"client_id\": \"{{client_id}}\",\n    \"secret\": \"{{secret_key}}\",\n    \"transfer_id\": \"ENTER_TRANSFER_ID_HERE\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360573,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_136c0abd54b045de8047f83a43d58050",
+          "parentId":"fld_1c61cd05dfbf46209f3cef18e2f42d69",
+          "modified":1674587360574,
+          "created":1674587360574,
+          "url":"https://{{env_url}}/transfer/create",
+          "name":"Initiate a transfer",
+          "description":"Use the `/transfer/create` endpoint to initiate a new transfer.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n    \"client_id\": \"{{client_id}}\",\n    \"secret\": \"{{secret_key}}\",\n    \"access_token\": \"{{access_token}}\",\n    \"account_id\": \"{{account_id}}\",\n    \"payment_profile_token\": \"{{payment_profile_token}}\",\n    \"authorization_id\": \"{{authorization_id}}\",\n    \"amount\": \"0.50\",\n    \"description\": \"test\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360574,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_777af1989e55441c94bbe4295e6923c8",
+          "parentId":"fld_1c61cd05dfbf46209f3cef18e2f42d69",
+          "modified":1674587360574,
+          "created":1674587360574,
+          "url":"https://{{env_url}}/transfer/authorization/create",
+          "name":"Authorize a transfer",
+          "description":"Use the `/transfer/authorization/create` endpoint to determine transfer failure risk.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n    \"client_id\": \"{{client_id}}\",\n    \"secret\": \"{{secret_key}}\",\n    \"access_token\": \"{{access_token}}\",\n    \"account_id\": \"{{account_id}}\",\n    \"payment_profile_token\": \"{{payment_profile_token}}\",\n    \"type\": \"credit\",\n    \"network\": \"ach\",\n    \"ach_class\": \"ppd\",\n    \"amount\": \"0.50\",\n    \"user\": {\n        \"legal_name\": \"Anna Charleston\",\n        \"email_address\": \"anna.charleston@example.com\"\n    }\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360574,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_b7cbce7554c64aeabc63cfb52e21fda2",
+          "parentId":"fld_1c61cd05dfbf46209f3cef18e2f42d69",
+          "modified":1674587360574,
+          "created":1674587360574,
+          "url":"https://{{env_url}}/payment_profile/create",
+          "name":"Create Payment Profile",
+          "description":"Use the `/transfer/authorization/create` endpoint to determine transfer failure risk.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n    \"client_id\": \"{{client_id}}\",\n    \"secret\": \"{{secret_key}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360574,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_2cd8312d8320449fb9d9947469c163ab",
+          "parentId":"fld_e789be34d7104b3e816db3615866d92a",
+          "modified":1674587360578,
+          "created":1674587360578,
+          "url":"https://{{env_url}}/processor/balance/get",
+          "name":"Get Balance data (for processors only)",
+          "description":"The `/processor/balance/get` endpoint returns the real-time balance for each of an Item's accounts. While other endpoints may return a balance object, only `/processor/balance/get` forces the available and current balance fields to be refreshed rather than cached. ",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"client_id\": \"{{client_id}}\",\n\t\"secret\": \"{{secret_key}}\",\n\t\"processor_token\": \"{{processor_token}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360578,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_e789be34d7104b3e816db3615866d92a",
+          "parentId":"fld_b259b6a10e2548f68bb18d8cc39dab66",
+          "modified":1674587360581,
+          "created":1674587360581,
+          "name":"Processors",
+          "description":"",
+          "environment":{
+             
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1674587360581,
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_4722bd21b2eb4e1386ac2a43393f67ef",
+          "parentId":"fld_e789be34d7104b3e816db3615866d92a",
+          "modified":1674587360579,
+          "created":1674587360579,
+          "url":"https://{{env_url}}/processor/auth/get",
+          "name":"Get Auth data (for processors only)",
+          "description":"The `/processor/auth/get` endpoint returns the bank account and bank identification number (such as the routing number, for US accounts), for a checking or savings account that's associated with a given `processor_token`. The endpoint also returns high-level account data and balances when available.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"client_id\": \"{{client_id}}\",\n\t\"secret\": \"{{secret_key}}\",\n\t\"processor_token\": \"{{processor_token}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360579,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_9949e354588548fca37954a0b3b45c05",
+          "parentId":"fld_e789be34d7104b3e816db3615866d92a",
+          "modified":1674587360579,
+          "created":1674587360579,
+          "url":"https://{{env_url}}/processor/identity/get",
+          "name":"Get Identity data (for processors only)",
+          "description":"The `/processor/identity/get` endpoint allows you to retrieve various account holder information on file with the financial institution, including names, emails, phone numbers, and addresses.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"client_id\": \"{{client_id}}\",\n\t\"secret\": \"{{secret_key}}\",\n\t\"processor_token\": \"{{processor_token}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360579,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_19d4553325454ade9ac1d59f27fc58cc",
+          "parentId":"fld_e789be34d7104b3e816db3615866d92a",
+          "modified":1674587360580,
+          "created":1674587360580,
+          "url":"https://{{env_url}}/processor/token/create",
+          "name":"Create processor token",
+          "description":"Used to create a token suitable for sending to one of Plaid's partners to enable integrations. Note that Stripe partnerships use bank account tokens instead; see `/processor/stripe/bank_account_token/create` for creating tokens for use with Stripe integrations.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"client_id\": \"{{client_id}}\",\n\t\"secret\": \"{{secret_key}}\",\n    \"access_token\": \"{{access_token}}\",\n    \"account_id\": \"{{account_id}}\",\n    \"processor\": \"dwolla\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360580,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_3835623e6c41407783a4017c4431bdc3",
+          "parentId":"fld_e789be34d7104b3e816db3615866d92a",
+          "modified":1674587360580,
+          "created":1674587360580,
+          "url":"https://{{env_url}}/sandbox/processor_token/create",
+          "name":"Create a Sandbox test Item and processor token",
+          "description":"Use the `/sandbox/processor_token/create` endpoint to create a valid `processor_token` for an arbitrary institution ID and test credentials. The created `processor_token` corresponds to a new Sandbox Item. You can then use this `processor_token` with the `/processor/` API endpoints in Sandbox. You can also use `/sandbox/processor_token/create` with the [`user_custom` test username](/docs/sandbox/user-custom) to generate a test account with custom data.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"client_id\": \"{{client_id}}\",\n\t\"secret\": \"{{secret_key}}\",\n    \"institution_id\": \"ins_3\",\n    \"options\": {\n        \"override_username\": \"user_good\",\n        \"override_password\": \"pass_good\"\n    }\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360580,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_bc3f310ea4b14dc69fca0f773787956a",
+          "parentId":"fld_e789be34d7104b3e816db3615866d92a",
+          "modified":1674587360580,
+          "created":1674587360580,
+          "url":"https://{{env_url}}/processor/stripe/bank_account_token/create",
+          "name":"Create Stripe bank account token",
+          "description":"Used to create a token suitable for sending to Stripe to enable Plaid-Stripe integrations.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"client_id\": \"{{client_id}}\",\n\t\"secret\": \"{{secret_key}}\",\n    \"access_token\": \"{{access_token}}\",\n    \"account_id\": \"{{account_id}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360580,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_e16d3e063afb4b34bf09fc783b1d338d",
+          "parentId":"fld_b8253056f89d44c28a37c71811a2e975",
+          "modified":1674587360581,
+          "created":1674587360581,
+          "url":"https://{{env_url}}/payment_initiation/consent/payment/execute",
+          "name":"Execute Consent Based Payment",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n    \"client_id\": \"{{client_id}}\",\n    \"secret\": \"{{secret_key}}\",\n    \"consent_id\": \"{{payment_consent_id}}\",\n    \"amount\": {\n        \"currency\": \"GBP\",\n        \"value\": 3\n    },\n    \"idempotency_key\": \"{{$randomUUID}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360581,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_b8253056f89d44c28a37c71811a2e975",
+          "parentId":"fld_b259b6a10e2548f68bb18d8cc39dab66",
+          "modified":1674587360585,
+          "created":1674587360585,
+          "name":"Payment Initiation (UK and Europe only)",
+          "description":"The UK Payment Initiation API enables payment transfers within your app. Plaid supports both domestic payments denominated in pound sterling (typically via the Faster Payments network, although this is up to the institution) and international payments denominated in euro (typically via SEPA Credit Transfer). Each time a client wants to receive a payment, the end user must authorize the payment in Link before the payment can be initiated.\n\n**Note:** The revised EU Directive on Payment Services (\"PSD2\") regulations require strong customer authentication (\"SCA\") for each payment order.",
+          "environment":{
+             
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1674587360585,
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_2313ef98385e4397933dc54bcebc83f1",
+          "parentId":"fld_b8253056f89d44c28a37c71811a2e975",
+          "modified":1674587360582,
+          "created":1674587360582,
+          "url":"https://{{env_url}}/payment_initiation/consent/create",
+          "name":"Create Payment Consent",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n    \"client_id\": \"{{client_id}}\",\n    \"secret\": \"{{secret_key}}\",\n    \"recipient_id\": \"{{recipient_id}}\",\n    \"reference\": \"Test recurring\",\n    \"scopes\": [\n        \"ME_TO_ME\"\n    ],\n    \"constraints\": {\n        \"max_payment_amount\": {\n            \"currency\": \"GBP\",\n            \"value\": 10\n        },\n        \"periodic_amounts\": [\n            {\n                \"amount\": {\n                    \"currency\": \"GBP\",\n                    \"value\": 50\n                },\n                \"alignment\": \"CALENDAR\",\n                \"interval\": \"MONTH\"\n            },\n            {\n                \"amount\": {\n                    \"currency\": \"GBP\",\n                    \"value\": 130\n                },\n                \"alignment\": \"CONSENT\",\n                \"interval\": \"YEAR\"\n            }\n        ]\n    }\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360582,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_a815fb08ccb14e20bfa25f847b996af6",
+          "parentId":"fld_b8253056f89d44c28a37c71811a2e975",
+          "modified":1674587360582,
+          "created":1674587360582,
+          "url":"https://{{env_url}}/payment_initiation/consent/get",
+          "name":"Get Payment Consent",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"consent_id\": \"{{payment_consent_id}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360582,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_d6bb9004fefa4da78d38dbc2cc4d070f",
+          "parentId":"fld_b8253056f89d44c28a37c71811a2e975",
+          "modified":1674587360582,
+          "created":1674587360582,
+          "url":"https://{{env_url}}/payment_initiation/consent/revoke",
+          "name":"Revoke Payment Consent",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"consent_id\": \"{{payment_consent_id}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360582,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_09f12d15144e40cca0c06752be9b6398",
+          "parentId":"fld_b8253056f89d44c28a37c71811a2e975",
+          "modified":1674587360583,
+          "created":1674587360583,
+          "url":"https://{{env_url}}/payment_initiation/recipient/get",
+          "name":"Get Payment Recipient",
+          "description":"The `/payment_initiation/recipient/get` endpoint allows you to retrieve all of the details for a recipient that you have created.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"recipient_id\": \"{{recipient_id}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360583,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_a335fb3293cb40889c6d8ad17832cfda",
+          "parentId":"fld_b8253056f89d44c28a37c71811a2e975",
+          "modified":1674587360583,
+          "created":1674587360583,
+          "url":"https://{{env_url}}/payment_initiation/recipient/list",
+          "name":"List Payment Recipients",
+          "description":"The `/payment_initiation/recipient/list` endpoint allows you to retrieve details for all recipients that you have created.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360583,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_6746731d790b4a1aa5f74206a7259f56",
+          "parentId":"fld_b8253056f89d44c28a37c71811a2e975",
+          "modified":1674587360584,
+          "created":1674587360584,
+          "url":"https://{{env_url}}/payment_initiation/payment/get",
+          "name":"Get Payment",
+          "description":"The endpoint `payment_initiation/payment/get` takes a `payment_id` and returns all of the payment details for a previously created payment.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"payment_id\": \"{{payment_id}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360584,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_7f6b252e33b3420b9e2f8bfa1256afdc",
+          "parentId":"fld_b8253056f89d44c28a37c71811a2e975",
+          "modified":1674587360584,
+          "created":1674587360584,
+          "url":"https://{{env_url}}/link/token/create",
+          "name":"Create Link Token - Payment Initiation",
+          "description":"Creates a link token with options. The `payment_id` from `Create Payment` is passed with the creation of the link token. The link token can then be used to initialize Plaid Link.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"client_id\": \"{{client_id}}\",\n\t\"secret\": \"{{secret_key}}\",\n  \"client_name\": \"Insert Client name here\",\n  \"country_codes\": [\"GB\"],\n  \"language\": \"en\",\n  \"user\": {\n    \"client_user_id\": \"unique_user_id\"\n  },\n  \"products\": [\"payment_initiation\"],\n  \"payment_initiation\": {\n    \"payment_id\": \"{{payment_id}}\"\n  }\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360584,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_c1b29a32b30d4589b15a209b0eba1eae",
+          "parentId":"fld_b8253056f89d44c28a37c71811a2e975",
+          "modified":1674587360584,
+          "created":1674587360584,
+          "url":"https://{{env_url}}/payment_initiation/payment/list",
+          "name":"List Payments",
+          "description":"The endpoint `payment_initiation/payment/get` list payment details for all of your previously created payments.\n\nThis endpoint accepts `count` and `cursor` as optional parameters in order to support pagination. `count` limits how many payments are returned and can be set between 0 and 200. `cursor` should be a string in RFC 3339 format (i.e. `\"2019-12-06T22:35:49Z\"`). Only payments created before the `cursor` will be returned.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"count\": 5\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360584,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_2e05583171754f638f49f0d4120b7d23",
+          "parentId":"fld_b8253056f89d44c28a37c71811a2e975",
+          "modified":1674587360585,
+          "created":1674587360585,
+          "url":"https://{{env_url}}/payment_initiation/payment/create",
+          "name":"Create Payment",
+          "description":"Create and configure a payment by specifying a `recipient_id`, `reference`, `amount`, and `currency` to create a Plaid payment resource. The Plaid API returns a `payment_id` to identify the created payment.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"recipient_id\": \"{{recipient_id}}\",\n  \"reference\": \"Test Funding\",\n  \"amount\": {\n    \"currency\": \"GBP\",\n    \"value\": 100.00\n  }\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360585,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_cc9105067712469a9e5136207a1d7dc7",
+          "parentId":"fld_b8253056f89d44c28a37c71811a2e975",
+          "modified":1674587360585,
+          "created":1674587360585,
+          "url":"https://{{env_url}}/payment_initiation/recipient/create",
+          "name":"Create Payment Recipient",
+          "description":"In the sandbox environment, you can use the `/payment_initiation/recipient/create` endpoint to generate recipients. Programmatic recipient creation in the development and production environments can be done after approval by our compliance team.\n\nThe endpoint is idempotent: if a developer has already made a request with the same payment details, Plaid will return the same recipient_id. Recipients are scoped per environment.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"name\": \"Wonder Wallet\",\n  \"iban\": \"GB29NWBK60161331926819\",\n  \"address\": {\n    \"street\": [\n      \"96 Guild Street\",\n      \"9th Floor\"\n    ],\n    \"city\": \"London\",\n    \"postal_code\": \"SE14 8JW\",\n    \"country\": \"GB\"\n  }\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360585,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_8fca259133444a3b998101bcee29ffef",
+          "parentId":"fld_2ca46a157ed8418d96e0f6a66ec6f0df",
+          "modified":1674587360586,
+          "created":1674587360586,
+          "url":"https://{{env_url}}/webhook_verification_key/get",
+          "name":"Get Webhook Verification Key",
+          "description":"Get Webhook Verification Key",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"client_id\": \"{{client_id}}\",\n\t\"secret\": \"{{secret_key}}\",\n\t\"key_id\": \"ENTER_KEY_ID_HERE\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360586,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_2ca46a157ed8418d96e0f6a66ec6f0df",
+          "parentId":"fld_b259b6a10e2548f68bb18d8cc39dab66",
+          "modified":1674587360586,
+          "created":1674587360586,
+          "name":"Webhooks",
+          "description":"",
+          "environment":{
+             
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1674587360586,
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_d82b2dd885ed4508a810fb8799471ac3",
+          "parentId":"fld_2ca46a157ed8418d96e0f6a66ec6f0df",
+          "modified":1674587360586,
+          "created":1674587360586,
+          "url":"https://{{env_url}}/sandbox/item/fire_webhook",
+          "name":"Fire Webhook [Sandbox Only]",
+          "description":"Fire sandbox webhook for item",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"client_id\": \"{{client_id}}\",\n\t\"secret\": \"{{secret_key}}\",\n\t\"access_token\": \"{{access_token}}\",\n\t\"webhook_code\": \"DEFAULT_UPDATE\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360586,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_0fcfc976d831413c8021ae32886393d5",
+          "parentId":"fld_f0a60a664b684adf81b0fcb852c137a1",
+          "modified":1674587360587,
+          "created":1674587360587,
+          "url":"https://{{env_url}}/institutions/get_by_id",
+          "name":"Search Institution by ID",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n    \"institution_id\": \"ins_1\",\n    \"country_codes\": [\"US\"],\n    \"client_id\": \"{{client_id}}\",\n    \"secret\": \"{{secret_key}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360587,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_f0a60a664b684adf81b0fcb852c137a1",
+          "parentId":"fld_b259b6a10e2548f68bb18d8cc39dab66",
+          "modified":1674587360588,
+          "created":1674587360588,
+          "name":"Institutions",
+          "description":"Plaid supports thousands of financial institutions, and we’re always working to add support for more. We have a couple `institution` endpoints that help you to search for institutions as well as to retrieve a complete list of institutions supported by Plaid",
+          "environment":{
+             
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1674587360588,
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_a97c317738a54a95bc2505299f8db445",
+          "parentId":"fld_f0a60a664b684adf81b0fcb852c137a1",
+          "modified":1674587360587,
+          "created":1674587360587,
+          "url":"https://{{env_url}}/institutions/search",
+          "name":"Search Institution by Name",
+          "description":"The `/institutions/search` endpoint makes it easy to stay up-to-date with supported institutions and help your users quickly find their institutions.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n    \"client_id\": \"{{client_id}}\",\n    \"secret\": \"{{secret_key}}\",\n    \"query\": \"delta schools\",\n    \"country_codes\": [\"US\"],\n    \"products\": [\"auth\"]\n }"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360587,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_ca921b8a84af4bbb9b7b4e63e3b58207",
+          "parentId":"fld_f0a60a664b684adf81b0fcb852c137a1",
+          "modified":1674587360587,
+          "created":1674587360587,
+          "url":"https://{{env_url}}/institutions/get",
+          "name":"Retrieve Insitution List",
+          "description":"To see a full list of supported institutions across all products, use the `/institutions/get` and `/institutions/search` endpoints.  \n<br />\nUse the `count` and `offset` query parameters to retrieve the desired institution data.   \n<br />\n`count`: The total number of Institutions to return, with 0 < count <= 500. <br />\n`offset`: The number of Institutions to skip before returning results, with offset >= 0",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"client_id\": \"{{client_id}}\",\n\t\"secret\":\"{{secret_key}}\",\n\t\"count\": 200,\n\t\"offset\": 0,\n    \"country_codes\": [\"US\"]\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360587,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_478587557c584620aed41535e7b274fb",
+          "parentId":"fld_5328022670c84bdcb867e47c463859ab",
+          "modified":1674587360588,
+          "created":1674587360588,
+          "url":"https://{{env_url}}/investments/transactions/get",
+          "name":"Retrieve Investments Transactions",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"access_token\": \"{{access_token}}\",\n  \"start_date\": \"2019-01-01\",\n  \"end_date\": \"2021-01-01\" \n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360588,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_5328022670c84bdcb867e47c463859ab",
+          "parentId":"fld_b259b6a10e2548f68bb18d8cc39dab66",
+          "modified":1674587360589,
+          "created":1674587360589,
+          "name":"Investments",
+          "description":"Endpoints for Plaid's Investments product.",
+          "environment":{
+             
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1674587360589,
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_f3885c0c93bd4a93a9db95bc54f242f7",
+          "parentId":"fld_5328022670c84bdcb867e47c463859ab",
+          "modified":1674587360588,
+          "created":1674587360588,
+          "url":"https://{{env_url}}/investments/holdings/get",
+          "name":"Retrieve Investments Holdings",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"client_id\": \"{{client_id}}\",\n\t\"secret\": \"{{secret_key}}\",\n\t\"access_token\": \"{{access_token}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360588,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_41b8d6dcf19943e3be7c67636be3d701",
+          "parentId":"fld_ae5fd26c2705456a9329d9217a4a49a0",
+          "modified":1674587360589,
+          "created":1674587360589,
+          "url":"https://{{env_url}}/liabilities/get",
+          "name":"Retrieve Liabilities",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"client_id\": \"{{client_id}}\",\n\t\"secret\": \"{{secret_key}}\",\n\t\"access_token\": \"{{access_token}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360589,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_ae5fd26c2705456a9329d9217a4a49a0",
+          "parentId":"fld_b259b6a10e2548f68bb18d8cc39dab66",
+          "modified":1674587360590,
+          "created":1674587360590,
+          "name":"Liabilities",
+          "description":"",
+          "environment":{
+             
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1674587360590,
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_67d89a5ab91146669f9035efed55e12c",
+          "parentId":"fld_424adc9f985d4aa2a26263428200c3c5",
+          "modified":1674587360590,
+          "created":1674587360590,
+          "url":"https://{{env_url}}/asset_report/refresh",
+          "name":"Refresh Asset Report ",
+          "description":"Create a new Asset Report based on the old one, but with the most recent data available from the financial institution(s).",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n   \"client_id\": \"{{client_id}}\",\n   \"secret\": \"{{secret_key}}\",\n   \"asset_report_token\": \"{{asset_report_token}}\",\n   \"days_requested\": 30,\n   \"options\": {\n      \"client_report_id\": \"ENTER_CLIENT_REPORT_ID_HERE\",\n      \"webhook\": \"https://www.example.com/webhook\",\n      \"user\": {\n        \"client_user_id\": \"ENTER_USER_ID_HERE\",\n        \"first_name\": \"ENTER_FIRST_NAME_HERE\",\n        \"middle_name\": \"ENTER_MIDDLE_NAME_HERE\",\n        \"last_name\": \"ENTER_LAST_NAME_HERE\",\n        \"ssn\": \"111-22-1234\",\n        \"phone_number\": \"1-415-867-5309\",\n        \"email\": \"ENTER_EMAIL_HERE\"\n      }\n   }\n }"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360590,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_424adc9f985d4aa2a26263428200c3c5",
+          "parentId":"fld_b259b6a10e2548f68bb18d8cc39dab66",
+          "modified":1674587360593,
+          "created":1674587360593,
+          "name":"Assets",
+          "description":"",
+          "environment":{
+             
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1674587360593,
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_671b3fe3c245419a8420eb6829810fd8",
+          "parentId":"fld_424adc9f985d4aa2a26263428200c3c5",
+          "modified":1674587360591,
+          "created":1674587360591,
+          "url":"https://{{env_url}}/asset_report/audit_copy/remove",
+          "name":"Remove Audit Copy ",
+          "description":"The `/asset_report/audit_copy/remove` endpoint allows you to remove an Audit Copy. Removing an Audit Copy invalidates the `audit_copy_token` associated with it, meaning both you and any third parties holding the token will no longer be able to use it to access report data. `Item`s associated with the Asset Report, the Asset Report itself and other Audit Copies of it are not affected and will remain accessible after removing the given Audit Copy.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n   \"client_id\": \"{{client_id}}\",\n   \"secret\": \"{{secret_key}}\",\n   \"audit_copy_token\": \"ENTER_AUDIT_COPY_TOKEN_HERE\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360591,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_affa50db3c044d45a78366a7dafa0424",
+          "parentId":"fld_424adc9f985d4aa2a26263428200c3c5",
+          "modified":1674587360591,
+          "created":1674587360591,
+          "url":"https://{{env_url}}/asset_report/remove",
+          "name":"Remove Asset Report",
+          "description":"The `/asset_report/remove` endpoint allows you to remove an Asset Report. Removing an Asset Report invalidates its `asset_report_token`, meaning you will no longer be able to use it to access report data or create new Audit Copies. Removing an Asset Report does not affect the underlying Items, but does also invalidate any `audit_copy_token`s associated with the Asset Report. In other words, removing an Asset Report also cascade-removes its Audit Copies.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n   \"client_id\": \"{{client_id}}\",\n   \"secret\": \"{{secret_key}}\",\n   \"asset_report_token\": \"{{asset_report_token}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360591,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_3959e5573b5248b08b9de0c9c2cd5e7d",
+          "parentId":"fld_424adc9f985d4aa2a26263428200c3c5",
+          "modified":1674587360592,
+          "created":1674587360592,
+          "url":"https://{{env_url}}/asset_report/audit_copy/create",
+          "name":"Create Audit Copy",
+          "description":"Plaid can provide an **Audit Copy** of any Asset Report directly to a participating third party on your behalf. \n\nAn Audit Copy contains the same underlying data as the Asset Report. To grant access to an Audit Copy, you’ll create an `audit_copy_token` for it and then pass that token to the third party who needs access. Each third party has its own `auditor_id`, for example `fannie_mae`. You’ll need to create a separate Audit Copy for each third party to whom you want to grant access to the report.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n   \"client_id\": \"{{client_id}}\",\n   \"secret\": \"{{secret_key}}\",\n   \"asset_report_token\": \"{{asset_report_token}}\",\n   \"auditor_id\": \"ENTER_AUDITOR_ID_HERE\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360592,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_941158f91c924dbdae7e0458f12ee31e",
+          "parentId":"fld_424adc9f985d4aa2a26263428200c3c5",
+          "modified":1674587360592,
+          "created":1674587360592,
+          "url":"https://{{env_url}}/asset_report/get",
+          "name":"Retrieve an Asset Report (JSON)",
+          "description":"You can retrieve your Asset Report in multiple formats (PDF and JSON), determined by the endpoint you call.\n\nJSON: `/asset_report/get`  \nPDF: `/asset_report/pdf/get`  \n<br />\nJust like retrieving `transaction` data, you need to wait several seconds to retrieve an assets report after you create one. A good practice is to retrieve the data when you are notified that it's ready via webhook.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n   \"client_id\": \"{{client_id}}\",\n   \"secret\": \"{{secret_key}}\",\n   \"asset_report_token\": \"{{asset_report_token}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360592,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_aa8f7f70f74542809f5338380aacebf7",
+          "parentId":"fld_424adc9f985d4aa2a26263428200c3c5",
+          "modified":1674587360592,
+          "created":1674587360592,
+          "url":"https://{{env_url}}/asset_report/pdf/get",
+          "name":"Retrieve an Asset Report (PDF)",
+          "description":"You can retrieve your Asset Report in multiple formats (PDF and JSON), determined by the endpoint you call.\n\nJSON: `/asset_report/get`  \nPDF: `/asset_report/pdf/get`  \n<br />\nJust like retrieving `transaction` data, you need to wait several seconds to retrieve an assets report after you create one. A good practice is to retrieve the data when you are notified that it's ready via webhook.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n   \"client_id\": \"{{client_id}}\",\n   \"secret\": \"{{secret_key}}\",\n   \"asset_report_token\": \"{{asset_report_token}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360592,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_14d76fedb4454cdcafd3af5aff345796",
+          "parentId":"fld_424adc9f985d4aa2a26263428200c3c5",
+          "modified":1674587360593,
+          "created":1674587360593,
+          "url":"https://{{env_url}}/asset_report/create",
+          "name":"Create Asset Report",
+          "description":"With your desired `access_tokens` in hand, all you need to do to create an Asset Report is to call the `/asset_report/create` endpoint.\n\nWhen creating an Asset Report, the only required fields are your `client_id`, `secret`, an `array of access_tokens` (one for each Item to be included in the Report), and the number of `days_requested` which determines the duration of transaction history to be included.\n\n`options` is optional!",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n   \"client_id\": \"{{client_id}}\",\n   \"secret\": \"{{secret_key}}\",\n   \"access_tokens\": [\"{{access_token}}\"],\n   \"days_requested\": 30,\n   \"options\": {\n      \"client_report_id\": \"ENTER_CLIENT_REPORT_ID_HERE\",\n      \"webhook\": \"https://www.example.com/webhook\",\n      \"user\": {\n        \"client_user_id\": \"ENTER_USER_ID_HERE\",\n        \"first_name\": \"ENTER_FIRST_NAME_HERE\",\n        \"middle_name\": \"ENTER_MIDDLE_NAME_HERE\",\n        \"last_name\": \"ENTER_LAST_NAME_HERE\",\n        \"ssn\": \"111-22-1234\",\n        \"phone_number\": \"1-415-867-5309\",\n        \"email\": \"ENTER_EMAIL_HERE\"\n      }\n   }\n }"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360593,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_a954dd5719514e2b9007758f3aff8492",
+          "parentId":"fld_fc58282c7a0648f9982197b563128c4b",
+          "modified":1674587360593,
+          "created":1674587360593,
+          "url":"https://{{env_url}}/identity/get",
+          "name":"Retrieve Identity",
+          "description":"The `/identity/get` endpoint allows you to retrieve various account holder information on file with the financial institution, including names, emails, phone numbers, and addresses.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"access_token\": \"{{access_token}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360593,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_fc58282c7a0648f9982197b563128c4b",
+          "parentId":"fld_b259b6a10e2548f68bb18d8cc39dab66",
+          "modified":1674587360594,
+          "created":1674587360594,
+          "name":"Identity",
+          "description":"",
+          "environment":{
+             
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1674587360594,
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_29246f4828e04ec690bd123967fcbd7f",
+          "parentId":"fld_f7a4fe3ebfea4de5a86f8aa62937ac1e",
+          "modified":1674587360594,
+          "created":1674587360594,
+          "url":"https://{{env_url}}/accounts/balance/get",
+          "name":"Retrieve Balance",
+          "description":"The `/accounts/balance/get` endpoint returns the real-time balance for each of an `Item`’s accounts. It can be used for existing `Item`s that were added via any of Plaid’s other products.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"access_token\": \"{{access_token}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360594,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_f7a4fe3ebfea4de5a86f8aa62937ac1e",
+          "parentId":"fld_b259b6a10e2548f68bb18d8cc39dab66",
+          "modified":1674587360595,
+          "created":1674587360595,
+          "name":"Balance",
+          "description":"",
+          "environment":{
+             
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1674587360595,
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_3e2d9852b528459f8c67eee5fc918288",
+          "parentId":"fld_9f217a07eac34c2ca194cccee0e2886d",
+          "modified":1674587360595,
+          "created":1674587360595,
+          "url":"https://{{env_url}}/categories/get",
+          "name":"Retrieve Categories",
+          "description":"This endpoint allows you to get to get detailed information on categories returned by Plaid. This endpoint does not require authentication.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360595,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_9f217a07eac34c2ca194cccee0e2886d",
+          "parentId":"fld_b259b6a10e2548f68bb18d8cc39dab66",
+          "modified":1674587360596,
+          "created":1674587360596,
+          "name":"Transactions",
+          "description":"",
+          "environment":{
+             
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1674587360596,
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_e47710d6a0e24d21872040a7bc74e57d",
+          "parentId":"fld_9f217a07eac34c2ca194cccee0e2886d",
+          "modified":1674588510403,
+          "created":1674587360595,
+          "url":"https://{{env_url}}/transactions/refresh",
+          "name":"Force refresh Transactions",
+          "description":"`/transactions/refresh` is an optional endpoint for users of the Transactions product. It initiates an on-demand extraction to fetch the newest transactions for an Item. This on-demand extraction takes place in addition to the periodic extractions that automatically occur multiple times a day for any Transactions-enabled Item. If changes to transactions are discovered after calling `/transactions/refresh`, Plaid will fire a webhook: [`TRANSACTIONS_REMOVED`](https://www.plaid.com/docs/api/webhooks#deleted-transactions-detected) will be fired if any removed transactions are detected, and [`DEFAULT_UPDATE`](https://www.plaid.com/docs/api/webhooks#transactions-default_update) will be fired if any new transactions are detected. New transactions can be fetched by calling `/transactions/get`.\n\nAccess to `/transactions/refresh` in Production is specific to certain pricing plans. If you cannot access `/transactions/refresh` in Production, [contact Sales](https://www.plaid.com/contact) for assistance.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"client_id\": \"{{client_id}}\",\n\t\"secret\": \"{{secret_key}}\",\n\t\"access_token\": \"{{access_token}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360595,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_b754d572b5f14e9cbdf787e16a48f326",
+          "parentId":"fld_9f217a07eac34c2ca194cccee0e2886d",
+          "modified":1674588497828,
+          "created":1674587360596,
+          "url":"https://{{env_url}}/transactions/sync",
+          "name":"Retrieve Transactions By Incremental Updates",
+          "description":"_(replaces `/transactions/get` and its associated webhooks for most common use-cases)_\n\nThe `/transactions/sync` endpoint allows developers to subscribe to all transactions associated with an Item and get updates synchronously in a stream-like manner, using a cursor to track which updates have already been seen. `/transactions/sync` provides the same functionality as `/transactions/get` and can be used instead of `/transactions/get` to simplify the process of tracking transactions updates.\n\nReturned transactions data is grouped into three types of update, indicating whether the transaction was added, removed, or modified since the last call to the API.\n\nIn the first call to `/transactions/sync` for an Item, the endpoint will return all historical transactions data associated with that Item up until the time of the API call (as \"adds\"), which then generates a `latest_cursor` for that Item. In subsequent calls, send the `latest_cursor` to receive only the changes that have occurred since the previous call.\n\nDue to the potentially large number of transactions associated with an Item, results are paginated. The `has_more` field specifies if additional calls are necessary to fetch all available transaction updates.\n\nWhenever new or updated transaction data becomes available, `/transactions/sync` will provide these updates. Plaid typically checks for new data multiple times a day, but these checks may occur less frequently, such as once a day, depending on the institution. An Item's `status.transactions.last_successful_update` field will show the timestamp of the most recent successful update. To force Plaid to check for new transactions, use the `/transactions/refresh` endpoint.\n\nNote that for newly created Items, data may not be immediately available to `/transactions/sync`. Plaid begins preparing transactions data when the Item is created, but the process can take anywhere from a few seconds to several minutes to complete, depending on the number of transactions available.\n\nTo be alerted when new data is available, listen for the [`SYNC_UPDATES_AVAILABLE`](https://plaid.com/docs/api/products/transactions/#sync_updates_available) webhook.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"client_id\": \"{{client_id}}\",\n\t\"secret\": \"{{secret_key}}\",\n\t\"access_token\": \"{{access_token}}\",\n\t\"count\": 5\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360596,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_dfcd0965dd3e443393b626960cec4ed9",
+          "parentId":"fld_9f217a07eac34c2ca194cccee0e2886d",
+          "modified":1674587786259,
+          "created":1674587360596,
+          "url":"https://{{env_url}}/transactions/get",
+          "name":"Retrieve Transactions by Date Range",
+          "description":"The `/transactions/get` endpoint allows developers to receive user-authorized transaction data for credit and depository-type Accounts. Transaction data is standardized across financial institutions, and in many cases transactions are linked to a clean name, entity type, location, and category. Similarly, account data is standardized and returned with a clean name, number, balance, and other meta information where available.  \n<br />\n\nYou must wait to retrieve transactions after creating an `Item` as it takes a couple seconds for Plaid to grab `transaction` data initially. If you don't, you will receive a `PRODUCT_NOT_READY` error. A good practice is to retrieve the data when you are notified that it's ready via webhook.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"access_token\": \"{{access_token}}\",\n  \"start_date\": \"2023-01-01\",\n  \"end_date\": \"2023-12-10\" \n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360596,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_e15a0e5d9ee24b8ebf5becf4bb233e1f",
+          "parentId":"fld_17163dd0e3004910be6a71b3500253fd",
+          "modified":1674588018444,
+          "created":1674587360597,
+          "url":"https://{{ _.origin }}/auth/get",
+          "name":"Retrieve Auth",
+          "description":"The `/auth/get` endpoint allows you to retrieve the bank account and routing numbers associated with an Item’s checking and savings accounts, along with high-level account data and balances.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"client_id\": \"{{ _.values[0].value }}\",\n\t\"secret\": \"{{ _.values[1].value }}\",\n\t\"access_token\": \"{{ _.values[3].value }}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360597,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_17163dd0e3004910be6a71b3500253fd",
+          "parentId":"fld_b259b6a10e2548f68bb18d8cc39dab66",
+          "modified":1674587360597,
+          "created":1674587360597,
+          "name":"Auth",
+          "description":"",
+          "environment":{
+             
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1674587360597,
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_c67894c0f62f4b75a7ac9d7b1d5d7c58",
+          "parentId":"fld_4285eeee01514ac9b46e5cf5b223d373",
+          "modified":1674588461387,
+          "created":1674587360602,
+          "url":"https://{{env_url}}/link/token/get",
+          "name":"Get existing Link Token",
+          "description":"The `/link/token/get` endpoint gets information about a previously-created `link_token` using the\n`/link/token/create` endpoint. It can be useful for debugging purposes.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n    \"client_id\": \"{{client_id}}\",\n    \"secret\": \"{{secret_key}}\",\n    \"link_token\": \"{{link_token}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360602,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_4285eeee01514ac9b46e5cf5b223d373",
+          "parentId":"fld_b259b6a10e2548f68bb18d8cc39dab66",
+          "modified":1674587360605,
+          "created":1674587360605,
+          "name":"Link Tokens",
+          "description":"",
+          "environment":{
+             
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1674587360605,
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_188d230e9559467e9edece2c6f965ef6",
+          "parentId":"fld_4285eeee01514ac9b46e5cf5b223d373",
+          "modified":1674587360603,
+          "created":1674587360603,
+          "url":"https://{{env_url}}/link/token/create",
+          "name":"Create Link Token - Update Mode",
+          "description":"Creates a link token with options. The link token can then be used to initialize Plaid Link.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"client_id\": \"{{client_id}}\",\n\t\"secret\": \"{{secret_key}}\",\n  \"client_name\": \"Insert Client name here\",\n  \"country_codes\": [\"US\"],\n  \"language\": \"en\",\n  \"user\": {\n    \"client_user_id\": \"unique_user_id\"\n  },\n  \"access_token\": \"ENTER_ACCESS_TOKEN_HERE\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360603,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_41ff3108c7d243d295959919fe02cf50",
+          "parentId":"fld_4285eeee01514ac9b46e5cf5b223d373",
+          "modified":1674587360603,
+          "created":1674587360603,
+          "url":"https://{{env_url}}/link/token/create",
+          "name":"Create Link Token - Identity Verification",
+          "description":"Creates a link token with options. The link token can then be used to initialize Plaid Link.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"client_name\": \"Insert Client name here\",\n  \"country_codes\": [\"US\"],\n  \"language\": \"en\",\n  \"user\": {\n    \"client_user_id\": \"unique_user_id\"\n  },\n  \"products\": [\"identity_verification\"],\n  \"identity_verification\": {\n    \"template_id\": \"paste in the template_id from the Integration button on the Identity Verification Dashboard\"\n  }\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360603,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_b281ad7510bb4a9a9826c28fb416c1df",
+          "parentId":"fld_4285eeee01514ac9b46e5cf5b223d373",
+          "modified":1674587360603,
+          "created":1674587360603,
+          "url":"https://{{env_url}}/link/token/create",
+          "name":"Create Link Token - Payment Initiation",
+          "description":"Creates a link token with options. The link token can then be used to initialize Plaid Link.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"client_id\": \"{{client_id}}\",\n\t\"secret\": \"{{secret_key}}\",\n  \"client_name\": \"Insert Client name here\",\n  \"country_codes\": [\"GB\"],\n  \"language\": \"en\",\n  \"user\": {\n    \"client_user_id\": \"unique_user_id\"\n  },\n  \"products\": [\"payment_initiation\"],\n  \"payment_initiation\": {\n    \"payment_id\": \"{{payment_id}}\"\n  }\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360603,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_42d36526d15049edbc1f4156fe779002",
+          "parentId":"fld_4285eeee01514ac9b46e5cf5b223d373",
+          "modified":1674587360604,
+          "created":1674587360604,
+          "url":"https://{{env_url}}/link/token/create",
+          "name":"Create Link Token",
+          "description":"Creates a link token with options. The link token can then be used to initialize Plaid Link.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"client_name\": \"Insert Client name here\",\n  \"country_codes\": [\"US\"],\n  \"language\": \"en\",\n  \"user\": {\n    \"client_user_id\": \"unique_user_id\"\n  },\n    \"products\": [\"auth\"]\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360604,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_5c25f963ca81427c9d4bf783dff8ea50",
+          "parentId":"fld_80f7409256814e9fb0e50bb5e9b2c7f2",
+          "modified":1674587360575,
+          "created":1674587360575,
+          "url":"https://{{env_url}}/transfer/repayment/list",
+          "name":"List historical repayments",
+          "description":"Use the `/transfer/repayment/list` endpoint to get a list of repayments based on specified filter criteria.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n    \"client_id\": \"{{client_id}}\",\n    \"secret\": \"{{secret_key}}\",\n    \"start_date\": \"2019-12-06T22:35:49Z\",\n    \"end_date\": \"2019-12-12T22:35:49Z\",\n    \"count\": 25,\n    \"offset\": 0\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360575,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_80f7409256814e9fb0e50bb5e9b2c7f2",
+          "parentId":"fld_1c61cd05dfbf46209f3cef18e2f42d69",
+          "modified":1674587360575,
+          "created":1674587360575,
+          "name":"Repayments",
+          "description":"",
+          "environment":{
+             
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1674587360575,
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_e3015e966e4044919a8d0d0fb2f3bbd1",
+          "parentId":"fld_80f7409256814e9fb0e50bb5e9b2c7f2",
+          "modified":1674587360575,
+          "created":1674587360575,
+          "url":"https://{{env_url}}/transfer/repayment/return/list",
+          "name":"List returns included in repayment",
+          "description":"Use the `/transfer/repayment/return/list` endpoint to retrieve the set of returns that were batched together into the specified repayment.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n    \"client_id\": \"{{client_id}}\",\n    \"secret\": \"{{secret_key}}\",\n    \"repayment_id\": \"ENTER_REPAYMENT_ID_HERE\",\n    \"count\": 25,\n    \"offset\": 0\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360575,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_00759ad6703141568ccb980cfda409c1",
+          "parentId":"fld_d55ea95ee7a04dc4bbe1a17747752c7f",
+          "modified":1674587360576,
+          "created":1674587360576,
+          "url":"https://{{env_url}}/transfer/intent/get",
+          "name":"Get existing Transfer intent",
+          "description":"Use the `/transfer/authorization/create` endpoint to determine transfer failure risk.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n   \"client_id\": \"{{client_id}}\",\n   \"secret\": \"{{secret_key}}\",\n   \"transfer_intent_id\": \"460cbe92-2dcc-8eae-5ad6-b37d0ec90fd9\"\n }"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360576,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_d55ea95ee7a04dc4bbe1a17747752c7f",
+          "parentId":"fld_1c61cd05dfbf46209f3cef18e2f42d69",
+          "modified":1674587360576,
+          "created":1674587360576,
+          "name":"Transfer UI",
+          "description":"",
+          "environment":{
+             
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1674587360576,
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_a231daa00f38485e8ce4af95bebe7d62",
+          "parentId":"fld_d55ea95ee7a04dc4bbe1a17747752c7f",
+          "modified":1674587360576,
+          "created":1674587360576,
+          "url":"https://{{env_url}}/transfer/intent/create",
+          "name":"Create Transfer intent",
+          "description":"Use the `/transfer/authorization/create` endpoint to determine transfer failure risk.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n   \"client_id\": \"{{client_id}}\",\n   \"secret\": \"{{secret_key}}\",\n   \"account_id\": \"3gE5gnRzNyfXpBK5wEEKcymJ5albGVUqg77gr\",\n   \"mode\": \"PAYMENT\",\n   \"amount\": \"12.34\",\n   \"description\": \"Foobar\",\n   \"ach_class\": \"ppd\",\n   \"origination_account_id\": \"1111-1111-1111-1111\",\n   \"user\": {\n     \"legal_name\": \"FirstName LastName\"\n   }\n }"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360576,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_53c7b61a32e94aa1a53fb00be206f548",
+          "parentId":"fld_ae24a166b2454f41b2a908273edd666a",
+          "modified":1674587360577,
+          "created":1674587360577,
+          "url":"https://{{env_url}}/transfer/event/list",
+          "name":"List transfer events",
+          "description":"Use the `/transfer/event/list` endpoint to get a list of transfer events based on specified filter criteria.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n    \"client_id\": \"{{client_id}}\",\n    \"secret\": \"{{secret_key}}\",\n    \"start_date\": \"2017-01-01\",\n    \"end_date\": \"2019-05-10\",\n    \"transfer_type\": \"credit\",\n    \"event_types\": [\n        \"pending\",\n        \"posted\"\n    ],\n    \"count\": 25,\n    \"offset\": 0\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360577,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_ae24a166b2454f41b2a908273edd666a",
+          "parentId":"fld_1c61cd05dfbf46209f3cef18e2f42d69",
+          "modified":1674587360577,
+          "created":1674587360577,
+          "name":"Transfer events",
+          "description":"",
+          "environment":{
+             
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1674587360577,
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_6ff64b29f10e40dd88eec92e61a1fb59",
+          "parentId":"fld_ae24a166b2454f41b2a908273edd666a",
+          "modified":1674587360577,
+          "created":1674587360577,
+          "url":"https://{{env_url}}/transfer/event/sync",
+          "name":"Sync transfer events",
+          "description":"`/transfer/event/sync` allows you to request up to the next 25 transfer events that happened after a specific `event_id`. Use the `/transfer/event/sync` endpoint to guarantee you have seen all transfer events. ",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n    \"client_id\": \"{{client_id}}\",\n    \"secret\": \"{{secret_key}}\",\n    \"after_id\": 0,\n    \"count\": 25\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360577,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_f347b9ad814e4d069d1d02101728c21f",
+          "parentId":"fld_2028a9a70fbd425c9bcfcfa7f012c507",
+          "modified":1674587360597,
+          "created":1674587360597,
+          "url":"https://{{env_url}}/sandbox/item/set_verification_status",
+          "name":"Simulate automated deposit verification [Sandbox only]",
+          "description":"",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\"client_id\": \"{{client_id}}\",\n\"secret\": \"{{secret_key}}\",\n\"access_token\": {{access_token}},\n\"account_id\": \"\",\n\"verification_status\": \"automatically_verified\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360597,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_2028a9a70fbd425c9bcfcfa7f012c507",
+          "parentId":"fld_79c35940d4e846f881300f39d6649717",
+          "modified":1674587360600,
+          "created":1674587360600,
+          "name":"Item Management",
+          "description":"This folder contains all the endpoints for managing your `Item`s.",
+          "environment":{
+             
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1674587360600,
+          "_type":"request_group"
+       },
+       {
+          "_id":"fld_79c35940d4e846f881300f39d6649717",
+          "parentId":"fld_b259b6a10e2548f68bb18d8cc39dab66",
+          "modified":1674587360602,
+          "created":1674587360602,
+          "name":"Items",
+          "description":"An `Item` is a set of credentials (map of key-value pairs) associated with a financial institution. Each `Item` can have many associated `Accounts`. For each `Account`, Plaid returns high-level information such as balance, name, and account type. Credit and depository `Accounts` may also have transactions associated with them.  \n<br/>\nIt is important to note that a single end-user of your application might have accounts at different financial institutions, which means they would have multiple different `Items` within your application. \n",
+          "environment":{
+             
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1674587360602,
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_3f50b8de36ee4644ba28fa1aff9953f7",
+          "parentId":"fld_2028a9a70fbd425c9bcfcfa7f012c507",
+          "modified":1674587360598,
+          "created":1674587360598,
+          "url":"https://{{env_url}}/sandbox/item/reset_login",
+          "name":"Simulate ITEM_LOGIN_REQUIRED [Sandbox only]",
+          "description":"An `Item` may transition into an error state in response to changes made by the user or financial institution. The most common scenarios are when a user changes their password or when the financial institution changes their multi-factor authentication flow. [Plaid Link](https://plaid.com/docs/api/#updating-items-via-link) makes it easy to restore a user's `Item` to a good state by having them provide updated credentials and MFA information, if needed.  \n<br />\nIn the Sandbox, `Item`s transition to an `ITEM_LOGIN_REQUIRED` error state automatically after 30 days. You can also simulate this event via an API request.  \n<br />\nThe `/sandbox/item/reset_login` endpoint allows you put an Item in an `ITEM_LOGIN_REQUIRED` error state. You can then use [Plaid Link update mode](https://plaid.com/docs/api/#updating-items-via-link) to restore the `Item` to a good state.  \n<br />\nAn `ITEM_LOGIN_REQUIRED` webhook will be fired after a call to this endpoint, if one is associated with the `Item`.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n\t\"access_token\": \"{{access_token}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360598,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_711b9a96890e47c8889b5f51c9bac442",
+          "parentId":"fld_2028a9a70fbd425c9bcfcfa7f012c507",
+          "modified":1674587360598,
+          "created":1674587360598,
+          "url":"https://{{env_url}}/item/webhook/update",
+          "name":"Update an Item's Webhook",
+          "description":"This endpoint allows you to update the webhook url for an `Item`. This request triggers a `WEBHOOK_UPDATE_ACKNOWLEDGED` [webhook](https://plaid.com/docs/api/#item-webhooks).",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n    \"client_id\": \"{{client_id}}\",\n    \"secret\": \"{{secret_key}}\",\n    \"access_token\": \"{{access_token}}\",\n    \"webhook\": \"ENTER_WEBHOOK_URL_HERE\"\n }"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360598,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_946dfdc16cd94275b9319dd9b7e1e05c",
+          "parentId":"fld_2028a9a70fbd425c9bcfcfa7f012c507",
+          "modified":1674587360598,
+          "created":1674587360598,
+          "url":"https://{{env_url}}/item/remove",
+          "name":"Remove Item",
+          "description":"This endpoint allows you to remove an `Item` using its `access_token`.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n    \"client_id\": \"{{client_id}}\",\n    \"secret\": \"{{secret_key}}\",\n    \"access_token\": \"{{access_token}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360598,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_ab6173bde7564f3ab92c9711d99eda1a",
+          "parentId":"fld_2028a9a70fbd425c9bcfcfa7f012c507",
+          "modified":1674587360599,
+          "created":1674587360599,
+          "url":"https://{{env_url}}/accounts/get",
+          "name":"Retrieve an Item's Accounts",
+          "description":"This endpoint allows you to retrieve all available `Account`s associated with an `Item`.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"client_id\": \"{{client_id}}\",\n\t\"secret\": \"{{secret_key}}\",\n\t\"access_token\": \"{{access_token}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360599,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_f04c95a337be46bbbcfaef560b16b667",
+          "parentId":"fld_2028a9a70fbd425c9bcfcfa7f012c507",
+          "modified":1674587360599,
+          "created":1674587360599,
+          "url":"https://{{env_url}}/item/access_token/invalidate",
+          "name":"Rotate Access Token",
+          "description":"By default, the `access_token` associated with an `Item` does not expire and should be stored in a persistent, secure manner.  \n<br />\nYou can use the POST `/item/access_token/invalidate` endpoint to rotate the `access_token` associated with an `Item`. The endpoint returns a new `access_token` and immediately invalidates the previous `access_token`.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n    \"client_id\": \"{{client_id}}\",\n    \"secret\": \"{{secret_key}}\",\n\t\"access_token\": \"{{access_token}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360599,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_9eb3551b87554f35af3842c1f23c365f",
+          "parentId":"fld_2028a9a70fbd425c9bcfcfa7f012c507",
+          "modified":1674587360600,
+          "created":1674587360600,
+          "url":"https://{{env_url}}/item/get",
+          "name":"Retrieve Item",
+          "description":"This endpoint allows you to retrieve information about an `Item`.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n\t\"client_id\": \"{{client_id}}\",\n\t\"secret\": \"{{secret_key}}\",\n\t\"access_token\": \"{{access_token}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360600,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_6876227331d54dc4bf5b33aae093e968",
+          "parentId":"fld_d8e289e3f4564a6c9e8a1c02a1a0e160",
+          "modified":1674587360600,
+          "created":1674587360600,
+          "url":"https://{{env_url}}/item/public_token/exchange",
+          "name":"Exchange Token",
+          "description":"Goes through the exchange token process where the `public_token` is exchanged for an `access_token`.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"public_token\": \"{{public_token}}\"\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360600,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_d8e289e3f4564a6c9e8a1c02a1a0e160",
+          "parentId":"fld_79c35940d4e846f881300f39d6649717",
+          "modified":1674587360602,
+          "created":1674587360602,
+          "name":"Item Creation",
+          "description":"",
+          "environment":{
+             
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1674587360602,
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_d83e7afcb10a437f8b3e2533343fffa8",
+          "parentId":"fld_d8e289e3f4564a6c9e8a1c02a1a0e160",
+          "modified":1674587360601,
+          "created":1674587360601,
+          "url":"https://{{env_url}}/sandbox/public_token/create",
+          "name":"Create Item [Sandbox Only]",
+          "description":"Creates an `Item` in the `sandbox` environment. You will get back a `public_token` and a `request_id`.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"institution_id\": \"ins_20\",\n  \"initial_products\": [\"auth\"],\n  \"options\": {\n    \"webhook\": \"https://www.genericwebhookurl.com/webhook\"\n  }\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360601,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_f8ac4479d6454426988422666be5440e",
+          "parentId":"fld_d8e289e3f4564a6c9e8a1c02a1a0e160",
+          "modified":1674587360601,
+          "created":1674587360601,
+          "url":"https://{{env_url}}/sandbox/public_token/create",
+          "name":"Create Item Custom [Sandbox Only]",
+          "description":"Creates an `Item` in the `sandbox` environment. You will get back a `public_token` and a `request_id`.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"institution_id\": \"ins_20\",\n  \"initial_products\": [\"auth\"],\n  \"options\": {\n    \"webhook\": \"https://www.genericwebhookurl.com/webhook\",\n    \"override_username\": \"user_custom\",\n    \"override_password\": \"{\\\"force_error\\\": \\\"USER_SETUP_REQUIRED\\\"}\"\n  }\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360601,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"req_0064e2c04a26452d9de351c6566628c0",
+          "parentId":"fld_f8ff07f562aa4080a4c23d7de773bb84",
+          "modified":1674587360604,
+          "created":1674587360604,
+          "url":"https://{{env_url}}/link/token/create",
+          "name":"Create Link Token - Bank Income",
+          "description":"Creates a link token with options. The link token can then be used to initialize Plaid Link.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"user_token\": \"{{user_token}}\",\n  \"client_name\": \"Insert Client name here\",\n  \"country_codes\": [\"US\"],\n  \"language\": \"en\",\n  \"user\": {\n    \"client_user_id\": \"unique_user_id\"\n  },\n  \"products\": [\"income_verification\"],\n  \"income_verification\": {\n      \"income_source_types\": [\"bank\"],\n      \"bank_income\": {\n          \"days_requested\": 365\n      }\n  }\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360604,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"fld_f8ff07f562aa4080a4c23d7de773bb84",
+          "parentId":"fld_4285eeee01514ac9b46e5cf5b223d373",
+          "modified":1674587360605,
+          "created":1674587360605,
+          "name":"Income Link Tokens",
+          "description":"",
+          "environment":{
+             
+          },
+          "environmentPropertyOrder":null,
+          "metaSortKey":-1674587360605,
+          "_type":"request_group"
+       },
+       {
+          "_id":"req_93e33575740d4e5e960af231aa3bdb42",
+          "parentId":"fld_f8ff07f562aa4080a4c23d7de773bb84",
+          "modified":1674587521570,
+          "created":1674587360604,
+          "url":"https://{{env_url}}/link/token/create",
+          "name":"Create Link Token - Payroll Income",
+          "description":"Creates a link token with options. The link token can then be used to initialize Plaid Link.",
+          "method":"POST",
+          "body":{
+             "mimeType":"application/json",
+             "text":"{\n  \"client_id\": \"{{client_id}}\",\n  \"secret\": \"{{secret_key}}\",\n  \"user_token\": \"{{user_token}}\",\n  \"client_name\": \"Insert Client name here\",\n  \"country_codes\": [\"US\"],\n  \"language\": \"en\",\n  \"user\": {\n    \"client_user_id\": \"unique_user_id\"\n  },\n  \"products\": [\"income_verification\"],\n  \"income_verification\": {\n      \"income_source_types\": [\"payroll\"],\n      \"payroll_income\": {\n          \"flow_types\": [\"digital\", \"document\"]\n      }\n  }\n}"
+          },
+          "parameters":[
+             
+          ],
+          "headers":[
+             {
+                "name":"Content-Type",
+                "value":"application/json"
+             }
+          ],
+          "authentication":{
+             
+          },
+          "metaSortKey":-1674587360604,
+          "isPrivate":false,
+          "settingStoreCookies":true,
+          "settingSendCookies":true,
+          "settingDisableRenderRequestBody":false,
+          "settingEncodeUrl":true,
+          "settingRebuildPath":true,
+          "settingFollowRedirects":"global",
+          "_type":"request"
+       },
+       {
+          "_id":"env_ODp9h2tLMlbD8a4lTSoC",
+          "parentId":"wrk_ViWEWUFbvucz0Lto0a5S",
+          "modified":1674588484514,
+          "created":1674587328282,
+          "name":"Base Environment",
+          "data":{
+             "id":"7b9485e5-7f50-4528-a7cc-31a457a28686",
+             "name":"Sandbox",
+             "client_id":" ${CLIENT_ID}",
+             "secret_key":"${SECRET}",
+             "public_token":"",
+             "access_token":"${ACCESS_TOKEN}",
+             "asset_report_token":"",
+             "env_url":"sandbox.plaid.com",
+             "account_id":"",
+             "processor_token":"",
+             "transfer_id":"",
+             "user_token":"",
+             "user_id":""
+          },
+          "dataPropertyOrder":{
+             "&":[
+                "id",
+                "name",
+                "client_id",
+                "secret_key",
+                "public_token",
+                "access_token",
+                "asset_report_token",
+                "env_url",
+                "account_id",
+                "processor_token",
+                "transfer_id",
+                "user_token",
+                "user_id"
+             ]
+          },
+          "color":null,
+          "isPrivate":false,
+          "metaSortKey":1597080078957,
+          "_type":"environment"
+       },
+       {
+          "_id":"jar_c92b569edfdea764743ef7ac45f245d323653d92",
+          "parentId":"wrk_ViWEWUFbvucz0Lto0a5S",
+          "modified":1674587333647,
+          "created":1674587333647,
+          "name":"Default Jar",
+          "cookies":[
+             
+          ],
+          "_type":"cookie_jar"
+       },
+       {
+          "_id":"spc_TNqRIXCJVk0T39ig56Qt",
+          "parentId":"wrk_ViWEWUFbvucz0Lto0a5S",
+          "modified":1674587328283,
+          "created":1674587328283,
+          "fileName":"Insomnia",
+          "contents":"",
+          "contentType":"yaml",
+          "_type":"api_spec"
+       },
+       {
+          "_id":"env_738c9a73887042fb92a0e22c6c37d53e",
+          "parentId":"env_ODp9h2tLMlbD8a4lTSoC",
+          "modified":1674588488022,
+          "created":1674587415501,
+          "name":"Sandbox",
+          "data":{
+             "id":"7b9485e5-7f50-4528-a7cc-31a457a28686",
+             "name":"Sandbox",
+             "client_id":" ${CLIENT_ID}",
+             "secret_key":"${SECRET}",
+             "public_token":"",
+             "access_token":"${ACCESS_TOKEN}",
+             "asset_report_token":"",
+             "env_url":"sandbox.plaid.com",
+             "account_id":"",
+             "processor_token":"",
+             "transfer_id":"",
+             "user_token":"",
+             "user_id":""
+          },
+          "dataPropertyOrder":{
+             "&":[
+                "id",
+                "name",
+                "client_id",
+                "secret_key",
+                "public_token",
+                "access_token",
+                "asset_report_token",
+                "env_url",
+                "account_id",
+                "processor_token",
+                "transfer_id",
+                "user_token",
+                "user_id"
+             ]
+          },
+          "color":"#f5c2e7",
+          "isPrivate":false,
+          "metaSortKey":1674587415501,
+          "_type":"environment"
+       }
+    ]
+ }
